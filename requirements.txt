@@ -1,0 +1,19 @@
+# Python >= 3.10 (tested on 3.13). Also needed on PATH:
+#   node + npm    Node 18+, JS runner (npm installs lodash into ./node_modules on first use)
+#   javac + java  JDK 17+, Java runner and L2 equivalence verifier
+
+openai>=3.0,<4
+google-genai>=2.0,<3
+anthropic>=1.0,<2
+# hub 1.x requires namespaced repo ids, which breaks testset.py's "code_search_net" (CSN only).
+huggingface-hub>=0.24,<1.0
+python-dotenv>=1.0
+
+# The MINI attack in attack_tools.py. JS uses terser via npm instead.
+python-minifier>=3.0
+
+tree-sitter>=0.25
+tree-sitter-javascript>=0.25
+tree-sitter-java>=0.23
+
+datasets>=2.21,<3
