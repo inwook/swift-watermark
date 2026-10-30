@@ -129,8 +129,22 @@ strategy and function. The full list per language is in [docs/rewriters.md](docs
 
 ## Datasets
 
-| Dataset | Languages | Size | Source |
-|---------|-----------|------|--------|
-| HumanEval-X | py, js, java | 164 per language | THUDM/humaneval-x (excluded from the paper due to the space limitation) |
-| MBXP (MBPP / MBJSP / MBJP) | py, js, java | 500 / 938 / 874 | google-research-datasets/mbpp, AmazonScience/mxeval |
-| CodeSearchNet | py, js, java | 21,948 / 4,441 / 26,909 | github/CodeSearchNet |
+| Dataset | Languages | Size | Hugging Face | GitHub |
+|---------|-----------|------|--------------|--------|
+| HumanEval-X | py, js, java | 164 per language | [THUDM/humaneval-x](https://huggingface.co/datasets/THUDM/humaneval-x) | [THUDM/CodeGeeX](https://github.com/THUDM/CodeGeeX) |
+| MBPP | py | 500 | [google-research-datasets/mbpp](https://huggingface.co/datasets/google-research-datasets/mbpp) | [google-research/mbpp](https://github.com/google-research/google-research/tree/master/mbpp) |
+| MBJSP / MBJP | js, java | 938 / 874 | [AmazonScience/mxeval](https://huggingface.co/datasets/AmazonScience/mxeval) | [amazon-science/mxeval](https://github.com/amazon-science/mxeval) |
+| CodeSearchNet | py, js, java | 21,948 / 4,441 / 26,909 | [code-search-net/code_search_net](https://huggingface.co/datasets/code-search-net/code_search_net) | [github/CodeSearchNet](https://github.com/github/CodeSearchNet) |
+
+`testset.py` downloads them on first use. HumanEval-X is excluded from the paper due to the space limitation.
+
+## Test Projects
+
+The real-world projects are cloned into `testprojects/` at fixed commits by
+`scripts/setup_testprojects.sh`.
+
+| Project | Lang | Repository | Commit |
+|---------|------|------------|--------|
+| networkx | py | https://github.com/networkx/networkx | `24861327ed3bc9a45c28b38f6e4b2ec6c59e678f` |
+| gson | java | https://github.com/google/gson | `8260eddffe413c132b3a38e68446da6bd083220d` |
+| axios | js | https://github.com/axios/axios | `ad68e1a484b50086af427f767bbd7d6e3aab7ac3` |
